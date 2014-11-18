@@ -1,0 +1,52 @@
+﻿@model Lab1_MVC.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:red">Details</h2>
+
+@ViewBag.Date[0] In Time zone : @ViewBag.Date[1]
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarEngineType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarEngineType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
